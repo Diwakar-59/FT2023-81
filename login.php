@@ -69,7 +69,7 @@ include 'php_validate.php';
           <span id="checkemail" class="checkemail" style="color: red;"></span>
           <br><br>
           Password:
-          <input type="password" class="box" id="password" name="password" required password placeholder="Enter a password" onblur="validatePassword()">
+          <input type="password" class="box" id="password" name="password" required password placeholder="Enter a password" onblur="loginPasswordValidate()">
           <span style="color: red;">*</span>
           <br>
           <span id="checkpass" class="checkpass" style="color: red;"></span>

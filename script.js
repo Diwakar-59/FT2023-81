@@ -85,7 +85,27 @@ function validateEmail() {
   else {
     document.getElementById("checkemail").innerHTML =
       '<span style="color:green">This email address is valid !!</span>';
-    document.getElementById("submit").disabled = FALSE;
+    //document.getElementById("submit").disabled = FALSE;
+  }
+}
+
+function loginPasswordValidate() {
+  var password = document.getElementById("password").value;
+  var regex =  /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$/;
+  if (!password) {
+    document.getElementById("checkpass").innerHTML = 
+    '<span style="color:red">Password is required !!</span>';
+    document.getElementById("submit").disabled = TRUE;
+  }
+  else if (!password.match(regex)) {
+    document.getElementById("checkpass").innerHTML =
+      "*Password should be at least 8 characters in length and should include at least one upper case letter, one lower case letter, one number, and one special character.";
+    document.getElementById("submit").disabled = TRUE;
+  }
+  else {
+    document.getElementById("checkpass").innerHTML =
+      '<span style="color:green">This password is valid !!</span>';
+    //document.getElementById("submit").disabled = FALSE;
   }
 }
 

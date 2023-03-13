@@ -4,8 +4,8 @@ require 'dbconnect.php';
  * This class is responsible for all the PHP validation. 
  */
 
-class validate
-{
+class validate {
+  
   public $fname_error = '';
   public $lname_error = '';
   public $gender_error = '';

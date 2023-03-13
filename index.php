@@ -4,24 +4,8 @@
     header('location:login.php');
   }
   if (isset($_GET['q'])) {
-    if ($_GET['q'] == 1) {
-      header('location: Assignment-1/index.php');
-    }
-    elseif ($_GET['q'] == 2) {
-      header('location: Assignment-2/index.php');
-    }
-    elseif ($_GET['q'] == 3) {
-      header('location: Assignment-3/index.php');
-    }
-    elseif ($_GET['q'] == 4) {
-      header('location: Assignment-4/index.php');
-    }
-    elseif ($_GET['q'] == 5) {
-      header('location: Assignment-5/index.php');
-    }
-    elseif ($_GET['q'] == 6) {
-      header('location: Assignment-6/index.php');
-    }
+    $page = $_GET['q'];
+    header('location: Assignment-'.$page.'/index.php');
   }
   
 ?>
